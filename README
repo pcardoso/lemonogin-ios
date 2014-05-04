@@ -4,6 +4,8 @@ Tired of typing the same old username/password combinations for test accounts wh
 
 This is a little tool I wrote to simplify the process of signin in.
 
+![Image](./images/lemonogin.gif?raw=true)
+
 Long press on a UI element, a popup appears with a list of accounts, pick one and the username/password fields are filled.
 
 This is intended mostly for apps that:
