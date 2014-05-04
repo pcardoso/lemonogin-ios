@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta charset="UTF-8">
+		<title>Lemonogin</title>
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+		<style type="text/css" media="screen">
+			body { font: 14pt "Lucida Grande", arial, sans-serif; padding: 0; margin: 0; }
+			#title { color: #333; background: #80FF00; padding: 20px 10px; margin: 0; vertical-align: middle; font-weight: bold;}
+			#list { margin: 0; padding: 0; }
+			#list li { padding: 10px; border-bottom: 1px solid #ddd;}
+			#list a { color: #555; text-decoration: none;}
+		</style>
+	</head>
+	<body>
+		<div id="title">🍋 Lemonogin</div>
+		<ul id="list"></ul>
+
+		<script type="text/javascript" charset="utf-8">
+
+			window.onload = function () {
+
+				var data = [
+				    {
+				        "username": "admin@example.com",
+				        "password": "123",
+				        "notes": "admin user"
+				    },
+				    {
+				        "username": "user@example.com",
+				        "password": "123",
+				        "notes": "regular user"
+				    }
+				];
+
+				for (var i = 0; i < data.length; i++) {
+					var v = data[i];
+					var cb = "lemonogin://?username=" + v.username + "&password=" + v.password + "&notes=" + v.notes;
+					document.getElementById("list").innerHTML += "<li><a href='" + cb + "'>" + v.username + "<br><strong>" + v.notes + "</strong></a></li>";
+				}
+			}
+
+		</script>
+
+	</body>
+</html>
